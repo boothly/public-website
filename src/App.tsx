@@ -24,13 +24,13 @@ export default function App() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
-            <a href="#early-access" className="text-muted-foreground hover:text-foreground transition-colors">Coming Soon</a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            <a href="#how-it-works" className="text-base text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
+            <a href="#features" className="text-base text-muted-foreground hover:text-foreground transition-colors">Features</a>
+            <a href="#early-access" className="text-base text-muted-foreground hover:text-foreground transition-colors">Coming Soon</a>
+            <a href="#contact" className="text-base text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             <button 
               onClick={() => scrollToSection('problem-solution')}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-3 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-4 py-2 text-base font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             >
               Learn More
             </button>
@@ -54,37 +54,37 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-background border-t">
             <div className="container mx-auto px-4 py-4 space-y-4">
-              <a 
-                href="#how-it-works" 
-                className="block text-muted-foreground hover:text-foreground transition-colors py-2"
+              <a
+                href="#how-it-works"
+                className="block text-base text-muted-foreground hover:text-foreground transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 How It Works
               </a>
-              <a 
-                href="#features" 
-                className="block text-muted-foreground hover:text-foreground transition-colors py-2"
+              <a
+                href="#features"
+                className="block text-base text-muted-foreground hover:text-foreground transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Features
               </a>
-              <a 
-                href="#early-access" 
-                className="block text-muted-foreground hover:text-foreground transition-colors py-2"
+              <a
+                href="#early-access"
+                className="block text-base text-muted-foreground hover:text-foreground transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Coming Soon
               </a>
-              <a 
-                href="#contact" 
-                className="block text-muted-foreground hover:text-foreground transition-colors py-2"
+              <a
+                href="#contact"
+                className="block text-base text-muted-foreground hover:text-foreground transition-colors py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </a>
-              <button 
+              <button
                 onClick={() => { scrollToSection('problem-solution'); setMobileMenuOpen(false); }}
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-3 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-full"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-input bg-background px-4 py-3 text-base font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-full"
               >
                 Learn More
               </button>
@@ -97,8 +97,8 @@ export default function App() {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 mb-4 md:mb-6">
-              <Bell className="h-3 w-3 mr-1" />
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 mb-4 md:mb-6">
+              <Bell className="h-4 w-4 mr-1" />
               Launching First in London
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-4 md:mb-6">
@@ -137,7 +137,7 @@ export default function App() {
               </h2>
               <div className="space-y-4 text-base md:text-lg text-muted-foreground">
                 <p>
-                  You're rushing through Penn Station when your biggest client calls. Do you take it in the noisy corridor where everyone can hear your confidential discussion?
+                  You're rushing through Liverpool Street Station when your biggest client calls. Do you take it in the noisy corridor where everyone can hear your confidential discussion?
                 </p>
                 <p>
                   Your flight is delayed and you have a crucial video interview in 20 minutes. The airport gate area is packed and echoing—not exactly professional.
@@ -203,18 +203,18 @@ export default function App() {
                 description: "Take your call in complete privacy, then simply walk out. You're automatically charged only for the time you used."
               }
             ].map((step, index) => (
-              <div key={index} className="rounded-lg border bg-card text-card-foreground shadow-sm text-center relative">
+              <div key={index} className="rounded-lg border bg-card text-card-foreground shadow-sm text-center relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/20 group cursor-pointer">
                 <div className="flex flex-col space-y-1.5 p-6">
-                  <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-7 h-7 md:w-8 md:h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-xs md:text-sm">
+                  <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-8 h-8 md:w-9 md:h-9 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                     {step.step}
                   </div>
-                  <div className="mx-auto mb-4 text-primary">
+                  <div className="mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
                     {step.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold leading-none tracking-tight">{step.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold leading-none tracking-tight transition-colors duration-300 group-hover:text-primary">{step.title}</h3>
                 </div>
                 <div className="p-6 pt-0">
-                  <p className="text-sm md:text-base text-muted-foreground">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -268,15 +268,15 @@ export default function App() {
                 description: "Get in, take your call, and get out—all without worrying about missing your train or flight."
               }
             ].map((feature, index) => (
-              <div key={index} className="rounded-lg border bg-card text-card-foreground shadow-sm text-center">
+              <div key={index} className="rounded-lg border bg-card text-card-foreground shadow-sm text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30 hover:bg-primary/5 group cursor-pointer">
                 <div className="flex flex-col space-y-1.5 p-6">
-                  <div className="mx-auto mb-4 text-primary">
+                  <div className="mx-auto mb-4 text-primary transition-all duration-300 group-hover:scale-125 group-hover:rotate-6">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold leading-none tracking-tight">{feature.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold leading-none tracking-tight transition-colors duration-300 group-hover:text-primary">{feature.title}</h3>
                 </div>
                 <div className="p-6 pt-0">
-                  <p className="text-sm md:text-base text-muted-foreground">
+                  <p className="text-base text-muted-foreground leading-relaxed transition-colors duration-300 group-hover:text-foreground">
                     {feature.description}
                   </p>
                 </div>
@@ -298,16 +298,16 @@ export default function App() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-8 md:mt-12 text-center">
               <div className="p-4 sm:p-0">
-                <div className="text-xl md:text-2xl font-bold text-primary mb-2">Q4</div>
-                <div className="text-xs md:text-sm text-muted-foreground">London Launch</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-2">Q2 2026</div>
+                <div className="text-sm md:text-base text-muted-foreground">London Launch</div>
               </div>
               <div className="p-4 sm:p-0">
-                <div className="text-xl md:text-2xl font-bold text-primary mb-2">Transit</div>
-                <div className="text-xs md:text-sm text-muted-foreground">Hub Locations</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-2">Transit</div>
+                <div className="text-sm md:text-base text-muted-foreground">Hub Locations</div>
               </div>
               <div className="p-4 sm:p-0">
-                <div className="text-xl md:text-2xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-xs md:text-sm text-muted-foreground">Availability</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-2">24/7</div>
+                <div className="text-sm md:text-base text-muted-foreground">Availability</div>
               </div>
             </div>
           </div>
@@ -343,13 +343,13 @@ export default function App() {
                 <img src={boothlyLogo} alt="Boothly" className="h-8 w-8" />
                 <span className="font-semibold">Boothly</span>
               </div>
-              <p className="text-muted-foreground mb-4 text-sm md:text-base">
+              <p className="text-muted-foreground mb-4 text-base leading-relaxed">
                 Private meeting spaces in public places. Your platform for calling back when you're running late.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Navigate</h3>
-              <ul className="space-y-2 text-sm md:text-base">
+              <h3 className="font-semibold mb-4 text-base">Navigate</h3>
+              <ul className="space-y-3 text-base">
                 <li><a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a></li>
                 <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
                 <li><a href="#early-access" className="text-muted-foreground hover:text-foreground transition-colors">Coming Soon</a></li>
@@ -357,8 +357,8 @@ export default function App() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-sm md:text-base">
+              <h3 className="font-semibold mb-4 text-base">Contact</h3>
+              <ul className="space-y-3 text-base">
                 <li className="flex items-center">
                   <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
                   <span className="text-muted-foreground break-all">hello@boothlyworks.com</span>
@@ -371,8 +371,8 @@ export default function App() {
             </div>
           </div>
           <div className="border-t mt-8 md:mt-12 pt-6 md:pt-8 text-center text-muted-foreground">
-            <p className="mb-2 text-sm md:text-base">&copy; 2025 Boothly. All rights reserved.</p>
-            <p className="text-xs md:text-sm">Proudly made in London. The idea came to us during a brief moment of sunshine outside The Cow.</p>
+            <p className="mb-2 text-base">&copy; 2025 Boothly. All rights reserved.</p>
+            <p className="text-sm">Proudly made in London. The idea came to us during a brief moment of sunshine outside The Cow.</p>
           </div>
         </div>
       </footer>
