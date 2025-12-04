@@ -1,0 +1,5 @@
+# robots.txt for Boothly
+User-agent: *
+Allow: /
+
+Sitemap: https://boothlyworks.com/sitemap.xml
