@@ -565,7 +565,7 @@ export default function App() {
                 when you're running late.
               </p>
               <p className="text-xs sm:text-sm text-background/50">
-                Proudly made in London.
+                Proudly made in London. The idea came to us during a brief moment of sunshine outside The Cow.
               </p>
             </div>
 
