@@ -177,6 +177,107 @@
     background-clip: text;
   }
 
+  /* Outline/stroke text */
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary);
+    text-stroke: 2px var(--primary);
+  }
+
+  @media (min-width: 768px) {
+    .text-stroke {
+      -webkit-text-stroke: 3px var(--primary);
+      text-stroke: 3px var(--primary);
+    }
+  }
+
+  /* Editorial uppercase label */
+  .label-editorial {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+
+  /* Large editorial number */
+  .number-editorial {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--primary);
+    opacity: 0.15;
+    line-height: 0.85;
+  }
+
+  /* Italic accent */
+  .text-italic-accent {
+    font-family: var(--font-display);
+    font-style: italic;
+  }
+
+  /* Pull quote style */
+  .pull-quote {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--foreground);
+    border-left: 3px solid var(--secondary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .pull-quote {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* Stat number - oversized display */
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 640px) {
+    .stat-number {
+      font-size: 4rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .stat-number {
+      font-size: 5rem;
+    }
+  }
+
+  /* Typographic divider */
+  .typo-divider {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--primary);
+    opacity: 0.2;
+    text-align: center;
+  }
+
+  /* Section label - editorial style */
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
   /* Glass effect */
   .glass {
     background: rgba(255, 255, 255, 0.8);

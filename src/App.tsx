@@ -1,6 +1,5 @@
 import { Check, MapPin, Shield, Clock, Headphones, Wifi, Phone, Mail, Train, Menu, X, Sparkles, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import boothlyLogo from '@/assets/boothlynew.png';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,10 +28,9 @@ export default function App() {
         isScrolled ? 'glass border-b border-border/50 shadow-sm' : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 lg:h-20 items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src={boothlyLogo} alt="Boothly" className="h-9 w-9 lg:h-10 lg:w-10" />
-            <span className="font-display text-xl font-semibold text-foreground">Boothly</span>
-          </div>
+          <a href="#" className="font-display text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
+            Boothly
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -180,9 +178,9 @@ export default function App() {
 
               <h1 className="opacity-0 animate-fade-up delay-100 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.15]">
                 When you're{" "}
-                <span className="text-gradient">running late</span>,{" "}
+                <em className="text-gradient not-italic">running late</em>,{" "}
                 <br className="hidden sm:block" />
-                we're right here
+                we're <em className="text-italic-accent">right here</em>
               </h1>
 
               <p className="opacity-0 animate-fade-up delay-200 text-lg md:text-xl text-muted-foreground mb-8 max-w-xl lg:max-w-none leading-relaxed">
@@ -223,7 +221,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Right Visual */}
+            {/* Right Visual - Large Typographic Element */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div className="opacity-0 animate-scale-in delay-200 relative">
                 {/* Decorative rings */}
@@ -234,13 +232,11 @@ export default function App() {
                   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-2 border-secondary/20 animate-pulse-soft delay-200"></div>
                 </div>
 
-                {/* Main logo/image */}
-                <div className="relative z-10 p-4 sm:p-6 md:p-8">
-                  <img
-                    src={boothlyLogo}
-                    alt="Boothly - Private meeting booth"
-                    className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain drop-shadow-2xl"
-                  />
+                {/* Large typographic logo - outline style */}
+                <div className="relative z-10 p-4 sm:p-6 md:p-8 flex items-center justify-center w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+                  <span className="font-display text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] font-bold select-none text-stroke animate-float">
+                    B
+                  </span>
                 </div>
               </div>
             </div>
@@ -261,7 +257,7 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Problem */}
             <div className="order-2 lg:order-1">
-              <span className="badge-primary mb-4">The Problem</span>
+              <span className="section-label">The Problem</span>
               <h2 className="section-heading mb-6">
                 Your office shouldn't be a noisy corridor
               </h2>
@@ -270,13 +266,12 @@ export default function App() {
                   You're rushing through Liverpool Street Station when your biggest client calls.
                   Do you take it in the noisy corridor where everyone can hear your confidential discussion?
                 </p>
+                <p className="pull-quote">
+                  Important calls deserve important spaces.
+                </p>
                 <p className="text-lg">
                   Your flight is delayed and you have a crucial video interview in 20 minutes.
                   The airport gate area is packed and echoing—not exactly professional.
-                </p>
-                <p className="text-lg font-medium text-foreground">
-                  These moments happen every day. Important calls in inappropriate spaces.
-                  Professional meetings in unprofessional environments.
                 </p>
               </div>
             </div>
@@ -284,7 +279,7 @@ export default function App() {
             {/* Solution */}
             <div className="order-1 lg:order-2">
               <div className="card-accent p-8 md:p-10">
-                <span className="badge mb-4">Our Solution</span>
+                <span className="section-label text-secondary-dark">Our Solution</span>
                 <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
                   Privacy when you need it most
                 </h3>
@@ -324,9 +319,9 @@ export default function App() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 md:mb-20">
-            <span className="badge mb-4">Simple Process</span>
+            <span className="section-label">Simple Process</span>
             <h2 className="section-heading mb-4">
-              How Boothly works
+              How <em className="text-italic-accent">Boothly</em> works
             </h2>
             <p className="section-subheading mx-auto">
               Three simple steps to privacy and professionalism, wherever your journey takes you.
@@ -338,50 +333,45 @@ export default function App() {
             {[
               {
                 step: "01",
-                icon: <MapPin className="h-7 w-7" />,
+                icon: <MapPin className="h-6 w-6" />,
                 title: "Find & Book",
                 description: "Open the Boothly app to find available booths near you, or walk up to any booth and book instantly with a tap."
               },
               {
                 step: "02",
-                icon: <Phone className="h-7 w-7" />,
+                icon: <Phone className="h-6 w-6" />,
                 title: "Enter & Connect",
                 description: "Use your phone to unlock the booth, step inside your private space, and connect to premium WiFi and power."
               },
               {
                 step: "03",
-                icon: <Check className="h-7 w-7" />,
+                icon: <Check className="h-6 w-6" />,
                 title: "Call & Go",
                 description: "Take your call in complete privacy, then simply walk out. You're automatically charged only for the time you used."
               }
             ].map((step, index) => (
               <div
                 key={index}
-                className="card text-center group hover:border-primary/20"
+                className="card text-center group hover:border-primary/20 relative overflow-hidden"
               >
-                <div className="relative">
-                  {/* Step number */}
-                  <div className="step-badge mx-auto mb-6 font-mono">
-                    {step.step}
-                  </div>
+                {/* Large background number */}
+                <div className="absolute -top-4 -right-2 number-editorial text-8xl md:text-9xl pointer-events-none">
+                  {step.step}
+                </div>
 
+                <div className="relative z-10">
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                     {step.icon}
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold mb-3 text-foreground">
+                  <h3 className="font-display text-xl md:text-2xl font-semibold mb-3 text-foreground">
                     {step.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
-
-                {/* Connector line (hidden on mobile, visible on desktop) */}
-                {index < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-6 lg:-right-8 w-12 lg:w-16 h-0.5 bg-gradient-to-r from-border to-transparent"></div>
-                )}
               </div>
             ))}
           </div>
@@ -392,9 +382,9 @@ export default function App() {
       <section id="features" className="py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 md:mb-20">
-            <span className="badge mb-4">Features</span>
+            <span className="section-label">Features</span>
             <h2 className="section-heading mb-4">
-              Your platform for calling back
+              Your platform for <em className="text-italic-accent">calling back</em>
             </h2>
             <p className="section-subheading mx-auto">
               Professional-grade privacy and technology in the heart of public spaces.
@@ -493,28 +483,28 @@ export default function App() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="badge mb-4">Coming Soon</span>
+            <span className="section-label">Coming Soon</span>
             <h2 className="section-heading mb-4">
-              Coming Soon to London
+              Coming Soon to <em className="text-italic-accent">London</em>
             </h2>
             <p className="section-subheading mx-auto mb-12">
               We're building the future of private meeting spaces in public places.
               Be among the first to experience privacy and professionalism on the go.
             </p>
 
-            {/* Stats */}
+            {/* Stats - Enhanced Typography */}
             <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8 mb-12">
               <div className="card p-3 sm:p-4 md:p-6 text-center">
-                <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1">Q2</div>
-                <div className="text-xs sm:text-sm md:text-base text-muted-foreground">2026 Launch</div>
+                <div className="stat-number text-primary">Q2</div>
+                <div className="section-label mt-2">2026 Launch</div>
               </div>
               <div className="card p-3 sm:p-4 md:p-6 text-center">
-                <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-dark mb-1">5+</div>
-                <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Hub Locations</div>
+                <div className="stat-number text-secondary-dark">5<span className="text-2xl sm:text-3xl">+</span></div>
+                <div className="section-label mt-2">Hub Locations</div>
               </div>
               <div className="card p-3 sm:p-4 md:p-6 text-center">
-                <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1">24/7</div>
-                <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Availability</div>
+                <div className="stat-number text-primary">24<span className="text-xl sm:text-2xl">/7</span></div>
+                <div className="section-label mt-2">Availability</div>
               </div>
             </div>
 
@@ -545,7 +535,7 @@ export default function App() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="section-heading mb-4">
-            Don't miss the moment.
+            Don't miss the <em className="text-italic-accent">moment</em>.
             <br />
             <span className="text-gradient">Or the call.</span>
           </h2>
